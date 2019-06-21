@@ -1,7 +1,9 @@
 ﻿// 学生管理系统20190621.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 #define _CRT_SECURE_NO_WARNINGS
-#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 //学生信息
 struct STUDENT
@@ -15,6 +17,11 @@ struct STUDENT
 	float finalScore;	//综合总分 = 考试成绩 * 0.6 + 同学互评分*0.1 + 品德评分*0.1 + 老师评分*0.2
 	int examRank;		//考试成绩的排名
 	int finalRank;		//综合总分的排名
+
+	char address[50];	//住址
+	char tel[50];		//联系方式
+	char gender[4];		//性别
+
 };
 const char* filePath = "data.txt";
 /*
@@ -246,6 +253,9 @@ void PrintAllStuInfo(STULIST& sqList)
 	{
 		printf("学号=%08d\t", sqList.elements[i].sCode);
 		printf("姓名=%5s\t", sqList.elements[i].name);
+		printf("性别=%s\t", sqList.elements[i].gender);
+		printf("联系方式=%s\t", sqList.elements[i].tel);
+		printf("家庭住址=%s\t", sqList.elements[i].address);
 		printf("语文成绩=%.1f\t", sqList.elements[i].chineseScore);
 		printf("数学成绩=%.1f\t", sqList.elements[i].mathScore);
 		printf("英语成绩=%.1f\t", sqList.elements[i].englishScore);
@@ -298,9 +308,12 @@ void AddOrUpdateStuInfo(STULIST& sqList)
 		printf("[该学号已存在，将更新原有的学生信息]\n");
 
 		ListGetElem(sqList, destPos, oldStu);
-		printf("[原有的学生信息] 学号=%d\t姓名=%s\t语文=%.1f\t数学=%.1f\t英语=%.1f\t考试成绩=%.1f\t考试成绩排名=%d\t综合成绩=%.1f\t综合成绩排名=%d\n",
+		printf("[原有的学生信息] 学号=%d\t姓名=%s\t家庭住址=%s\t联系方式=%s\t性别=%s\t语文=%.1f\t数学=%.1f\t英语=%.1f\t考试成绩=%.1f\t考试成绩排名=%d\t综合成绩=%.1f\t综合成绩排名=%d\n",
 			oldStu.sCode,
 			oldStu.name,
+			oldStu.address,
+			oldStu.tel,
+			oldStu.gender,
 			oldStu.chineseScore,
 			oldStu.mathScore,
 			oldStu.englishScore,
@@ -309,7 +322,10 @@ void AddOrUpdateStuInfo(STULIST& sqList)
 			oldStu.finalScore,
 			oldStu.finalRank);
 	}
-	printf("姓名：");  scanf("%s", student.name);
+	printf("姓名：");	scanf("%s", student.name);
+	printf("家庭住址："); scanf("%s", student.address);
+	printf("联系方式："); scanf("%s", student.tel);
+	printf("性别：");	scanf("%s", student.gender);
 	printf("语文成绩："), scanf("%f", &student.chineseScore);
 	printf("数学成绩："), scanf("%f", &student.mathScore);
 	printf("英语成绩："), scanf("%f", &student.englishScore);
@@ -338,6 +354,8 @@ void AddOrUpdateStuInfo(STULIST& sqList)
 	}
 	else
 	{
+		student.examRank = oldStu.examRank;
+		student.finalRank = oldStu.finalRank;
 		//计算排名
 		for (int i = 0; i < sqList.length; i++)
 		{
@@ -396,9 +414,12 @@ void DropStuInfo(STULIST& sqList)
 	if (destPos == 0) { printf("删除失败,该学号不存在...\n"); system("pause"); return; }
 	STUDENT destStu;
 	ListGetElem(sqList, destPos, destStu);
-	printf("[您要删除的学生信息] 学号=%d\t姓名=%s\t语文=%.1f\t数学=%.1f\t英语=%.1f\t考试成绩=%.1f\t考试成绩排名=%d\t综合成绩=%.1f\t综合成绩排名=%d\n",
+	printf("[您要删除的学生信息] 学号=%d\t姓名=%s\t家庭住址=%s\t联系方式=%s\t性别=%s\t语文=%.1f\t数学=%.1f\t英语=%.1f\t考试成绩=%.1f\t考试成绩排名=%d\t综合成绩=%.1f\t综合成绩排名=%d\n",
 		destStu.sCode,
 		destStu.name,
+		destStu.address,
+		destStu.tel,
+		destStu.gender,
 		destStu.chineseScore,
 		destStu.mathScore,
 		destStu.englishScore,
@@ -442,9 +463,12 @@ void PrintStuInfoBySCode(STULIST& sqList)
 	if (destPos == 0) { printf("查询失败，无此学号...\n"); system("pause"); return; }
 	STUDENT oldStu;
 	ListGetElem(sqList, destPos, oldStu);
-	printf("[查询到的学生信息] 学号=%d\t姓名=%s\t语文=%.1f\t数学=%.1f\t英语=%.1f\t考试成绩=%.1f\t考试成绩排名=%d\t综合成绩=%.1f\t综合成绩排名=%d\n",
+	printf("[查询到的学生信息] 学号=%d\t姓名=%s\t家庭住址=%s\t联系方式=%s\t性别=%s\t语文=%.1f\t数学=%.1f\t英语=%.1f\t考试成绩=%.1f\t考试成绩排名=%d\t综合成绩=%.1f\t综合成绩排名=%d\n",
 		oldStu.sCode,
 		oldStu.name,
+		oldStu.address,
+		oldStu.tel,
+		oldStu.gender,
 		oldStu.chineseScore,
 		oldStu.mathScore,
 		oldStu.englishScore,
@@ -457,7 +481,7 @@ void PrintStuInfoBySCode(STULIST& sqList)
 
 int main()
 {
-	system("mode con cols=165 lines=30");
+	system("mode con cols=200 lines=30");
 	//顺序表初始化
 	STULIST sqList;
 	ListInit(sqList);
