@@ -6,7 +6,8 @@
 #include <conio.h>
 
 #include"windows.h"
-#include "easyx.h"
+//#include "easyx.h" 
+#include "EasyX\easyx.h" //如果未安装easyX，可直接包含项目中的这个easyX头文件
 
 //六张图片
 IMAGE img_player;		//人物
@@ -29,13 +30,13 @@ IMAGE img_gotIt;		//到达目的地的箱子
 int  map[3][7][8] =
 {
 	/*
-		0: 空地 " "
-		1: 墙 "▆"
-		3: 目的地 "☆"
-		4: 箱子 "★"
-		5：人 "※"
-		7:/目的(3)和箱子(4)在一起"⊙"
-		8:人(5)和目的(3)在一起:"※"
+		0: 空地
+		1: 墙
+		3: 目的地
+		4: 箱子
+		5：人
+		7:到达目的地的箱子
+		8:到达目的地的人
 	*/
 	{
 		1, 1, 1, 1, 1, 1, 1, 1,
@@ -234,10 +235,10 @@ bool Judge()
 }
 
 
-/**  
-* 函 数 名: InitMap 
+/**
+* 函 数 名: InitMap
 * 说    明：初始化地图元素、绘图环境
-* 返 回 值: void 
+* 返 回 值: void
 */
 void InitMap()
 {
@@ -253,10 +254,10 @@ void InitMap()
 	loadimage(&img_gotIt, _T("Image\\已到达目的地的箱子.png"), 50, 50, true);
 }
 
-/**  
-* 函 数 名: DrawMap 
+/**
+* 函 数 名: DrawMap
 * 说    明：根据三维数组绘制地图
-* 返 回 值: void 
+* 返 回 值: void
 */
 void DrawMap()
 {
