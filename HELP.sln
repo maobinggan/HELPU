@@ -15,7 +15,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20190622_基于EasyX的推�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20190622_基于控制台的简易记事本", "20190622_基于控制台的简易记事本\20190622_基于控制台的简易记事本.vcxproj", "{C36FEEDC-35F0-4ECB-813D-710DAD7E9ADA}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20190622_基于文件的学生随机点名系统", "20190622_基于文件的学生随机点名系统\20190622_基于文件的学生随机点名系统.vcxproj", "{741CAC06-61C5-493C-8A07-7883EDA5F6A1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20190623_基于文件的学生随机点名系统", "20190623_基于文件的学生随机点名系统\20190623_基于文件的学生随机点名系统.vcxproj", "{741CAC06-61C5-493C-8A07-7883EDA5F6A1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20190623_基于文件的班级管理系统", "20190623_基于文件的班级管理系统\20190623_基于文件的班级管理系统.vcxproj", "{E4378EB8-0762-4294-A6BB-5C37B609669B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,14 @@ Global
 		{741CAC06-61C5-493C-8A07-7883EDA5F6A1}.Release|x64.Build.0 = Release|x64
 		{741CAC06-61C5-493C-8A07-7883EDA5F6A1}.Release|x86.ActiveCfg = Release|Win32
 		{741CAC06-61C5-493C-8A07-7883EDA5F6A1}.Release|x86.Build.0 = Release|Win32
+		{E4378EB8-0762-4294-A6BB-5C37B609669B}.Debug|x64.ActiveCfg = Debug|x64
+		{E4378EB8-0762-4294-A6BB-5C37B609669B}.Debug|x64.Build.0 = Debug|x64
+		{E4378EB8-0762-4294-A6BB-5C37B609669B}.Debug|x86.ActiveCfg = Debug|Win32
+		{E4378EB8-0762-4294-A6BB-5C37B609669B}.Debug|x86.Build.0 = Debug|Win32
+		{E4378EB8-0762-4294-A6BB-5C37B609669B}.Release|x64.ActiveCfg = Release|x64
+		{E4378EB8-0762-4294-A6BB-5C37B609669B}.Release|x64.Build.0 = Release|x64
+		{E4378EB8-0762-4294-A6BB-5C37B609669B}.Release|x86.ActiveCfg = Release|Win32
+		{E4378EB8-0762-4294-A6BB-5C37B609669B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
