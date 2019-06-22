@@ -6,8 +6,8 @@
 #include <conio.h>
 
 #include"windows.h"
-//#include "easyx.h" 
-#include "EasyX\easyx.h" //如果未安装easyX，可直接包含项目中的这个easyX头文件
+#include "easyx.h" 
+//#include "EasyX\easyx.h" //如果未安装easyX，可直接包含项目中的这个easyX头文件
 
 //六张图片
 IMAGE img_player;		//人物
