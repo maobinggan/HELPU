@@ -13,6 +13,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20190621_基于顺序表的
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20190622_基于EasyX的推箱子游戏", "20190622_基于EasyX的推箱子游戏\20190622_基于EasyX的推箱子游戏.vcxproj", "{F4369755-114B-42A8-B029-B54507E5ADFE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20190622_基于控制台的简易记事本", "20190622_基于控制台的简易记事本\20190622_基于控制台的简易记事本.vcxproj", "{C36FEEDC-35F0-4ECB-813D-710DAD7E9ADA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20190622_基于文件的学生随机点名系统", "20190622_基于文件的学生随机点名系统\20190622_基于文件的学生随机点名系统.vcxproj", "{741CAC06-61C5-493C-8A07-7883EDA5F6A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +65,22 @@ Global
 		{F4369755-114B-42A8-B029-B54507E5ADFE}.Release|x64.Build.0 = Release|x64
 		{F4369755-114B-42A8-B029-B54507E5ADFE}.Release|x86.ActiveCfg = Release|Win32
 		{F4369755-114B-42A8-B029-B54507E5ADFE}.Release|x86.Build.0 = Release|Win32
+		{C36FEEDC-35F0-4ECB-813D-710DAD7E9ADA}.Debug|x64.ActiveCfg = Debug|x64
+		{C36FEEDC-35F0-4ECB-813D-710DAD7E9ADA}.Debug|x64.Build.0 = Debug|x64
+		{C36FEEDC-35F0-4ECB-813D-710DAD7E9ADA}.Debug|x86.ActiveCfg = Debug|Win32
+		{C36FEEDC-35F0-4ECB-813D-710DAD7E9ADA}.Debug|x86.Build.0 = Debug|Win32
+		{C36FEEDC-35F0-4ECB-813D-710DAD7E9ADA}.Release|x64.ActiveCfg = Release|x64
+		{C36FEEDC-35F0-4ECB-813D-710DAD7E9ADA}.Release|x64.Build.0 = Release|x64
+		{C36FEEDC-35F0-4ECB-813D-710DAD7E9ADA}.Release|x86.ActiveCfg = Release|Win32
+		{C36FEEDC-35F0-4ECB-813D-710DAD7E9ADA}.Release|x86.Build.0 = Release|Win32
+		{741CAC06-61C5-493C-8A07-7883EDA5F6A1}.Debug|x64.ActiveCfg = Debug|x64
+		{741CAC06-61C5-493C-8A07-7883EDA5F6A1}.Debug|x64.Build.0 = Debug|x64
+		{741CAC06-61C5-493C-8A07-7883EDA5F6A1}.Debug|x86.ActiveCfg = Debug|Win32
+		{741CAC06-61C5-493C-8A07-7883EDA5F6A1}.Debug|x86.Build.0 = Debug|Win32
+		{741CAC06-61C5-493C-8A07-7883EDA5F6A1}.Release|x64.ActiveCfg = Release|x64
+		{741CAC06-61C5-493C-8A07-7883EDA5F6A1}.Release|x64.Build.0 = Release|x64
+		{741CAC06-61C5-493C-8A07-7883EDA5F6A1}.Release|x86.ActiveCfg = Release|Win32
+		{741CAC06-61C5-493C-8A07-7883EDA5F6A1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

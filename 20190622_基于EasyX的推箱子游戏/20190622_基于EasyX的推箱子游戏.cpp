@@ -345,9 +345,9 @@ int main()
 
 		//打印关卡记录
 		TCHAR str[50] = { 0 };
-		wsprintf(str, L"当前第%d关 ，您的最高纪录：第%d关", cas + 1, recode.highestRecod + 1);
+		wsprintf(str, TEXT("当前第%d关 ，您的最高纪录：第%d关"), cas + 1, recode.highestRecod + 1);
 		RECT r = { 0, 7 * SIZE_IMAGE,  7 * SIZE_IMAGE + SIZE_IMAGE, 8 * SIZE_IMAGE };
-		drawtext(str, &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+		drawtext(str, &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE); //drawtext参数要求TCHAR，取决于项目的字符集
 
 		//等待玩家输入按键
 		Play();
