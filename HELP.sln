@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20190624_基于WinForm的�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20190624_基于WinForm的宿舍管理系统", "20190624_基于WinForm的宿舍管理系统\20190624_基于WinForm的宿舍管理系统.csproj", "{800A2293-8708-418B-BDA2-3823B77A582D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20190625_基于控制台的猜拳游戏", "20190625_基于控制台的猜拳游戏\20190625_基于控制台的猜拳游戏.vcxproj", "{1B3B7066-1A70-4539-B530-110848920BD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -149,6 +151,16 @@ Global
 		{800A2293-8708-418B-BDA2-3823B77A582D}.Release|x64.Build.0 = Release|Any CPU
 		{800A2293-8708-418B-BDA2-3823B77A582D}.Release|x86.ActiveCfg = Release|Any CPU
 		{800A2293-8708-418B-BDA2-3823B77A582D}.Release|x86.Build.0 = Release|Any CPU
+		{1B3B7066-1A70-4539-B530-110848920BD7}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{1B3B7066-1A70-4539-B530-110848920BD7}.Debug|x64.ActiveCfg = Debug|x64
+		{1B3B7066-1A70-4539-B530-110848920BD7}.Debug|x64.Build.0 = Debug|x64
+		{1B3B7066-1A70-4539-B530-110848920BD7}.Debug|x86.ActiveCfg = Debug|Win32
+		{1B3B7066-1A70-4539-B530-110848920BD7}.Debug|x86.Build.0 = Debug|Win32
+		{1B3B7066-1A70-4539-B530-110848920BD7}.Release|Any CPU.ActiveCfg = Release|Win32
+		{1B3B7066-1A70-4539-B530-110848920BD7}.Release|x64.ActiveCfg = Release|x64
+		{1B3B7066-1A70-4539-B530-110848920BD7}.Release|x64.Build.0 = Release|x64
+		{1B3B7066-1A70-4539-B530-110848920BD7}.Release|x86.ActiveCfg = Release|Win32
+		{1B3B7066-1A70-4539-B530-110848920BD7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
