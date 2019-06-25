@@ -110,16 +110,14 @@ namespace _20190624_基于WinForm的宿舍管理系统.DAL
         /// <param name="bean"></param>
         /// <param name="conditions"></param>
         /// <returns></returns>
-        public bool AlterById(T model)
+        public bool AlterByPK(T model, string PKName)
         {
             //初始化
             DataTable dataTable = null;
             T t = default(T);        //在泛型类型中，引用类型的default将泛型类型初始化null，值类型的default将泛型类型初始化为0
 
             //生成sql语句
-            String sqlStr = GenerateSql_UpdateNoWhere(model);   //生成不带条件的Update语句
-            string id = typeof(T).GetProperty("Id").GetValue(model).ToString();
-            sqlStr = sqlStr + "WHERE [Id]=" + id;               //连接Update条件
+            String sqlStr = GenerateSql_UpdateByPK(model, PKName);
 
             try {
                 //连接数据库
@@ -354,40 +352,41 @@ namespace _20190624_基于WinForm的宿舍管理系统.DAL
         }
 
         /// <summary>
-        /// 构造SQL语句：Update(条件缺省)
+        /// 构造SQL语句：Update(根据主键)
         /// </summary>
         /// <param name="bean"></param>
         /// <returns></returns>
-        protected string GenerateSql_UpdateNoWhere(T model)
+        protected string GenerateSql_UpdateByPK(T model, string PKName)
         {
-            // 获取泛型的具体类型
+            //得到泛型的具体类型和类属性集合
             Type type = typeof(T);
-
-            //获取泛型的各个属性
             PropertyInfo[] propertys = type.GetProperties();
 
-            //构造SQL字符串
-            StringBuilder sql = new StringBuilder(string.Format("UPDATE [{0}] SET ", type.Name));
+            //构造SQL语句：修改内容、修改条件
+            StringBuilder sql_dest = new StringBuilder(string.Format("UPDATE [{0}] SET ", type.Name));
+            StringBuilder sql_condition = new StringBuilder();
 
-            //遍历所有属性的名字
             foreach (PropertyInfo pi in propertys) {
-                string propName = pi.Name;              //获取属性名
-                object objValue = pi.GetValue(model);   //获取属性值
-
-                //根据属性名，得到Model对象的属性值
-                if (objValue == null) { continue; }     //如果该字段值为空，不能转为string，跳出循环，不构造SQL语句。
-                string propValue = objValue.ToString(); //转为string
-
-                //如果该字段为ID，跳过，不构造SQL语句。
-                if (propName.ToUpper().Equals("ID")) { continue; }
-
-                //构造SQL语句             
-                sql.Append(string.Format(",[{0}] = '{1}' ", propName, propValue));
+                string propName = pi.Name;
+                object objValue = pi.GetValue(model);
+                if (objValue == null) { continue; }
+                string propValue = objValue.ToString();
+                //当遇到指定主键时，写入‘修改条件’
+                if (propName.ToUpper().Equals(PKName.ToUpper())) {
+                    sql_condition.Append(string.Format("WHERE [{0}] = '{1}'", propName, propValue));
+                    continue;
+                }
+                //当遇到普通字段时，写入‘修改内容’
+                sql_dest.Append(string.Format(",[{0}] = '{1}' ", propName, propValue));
             }
 
-            //构造SQL字符串：替换掉字符串中第1个逗号
+            //拼接SQL语句
+            string res = sql_dest.Append(sql_condition).ToString();
+
+            //替换掉第一个逗号
             Regex regex = new Regex(",");
-            string res = regex.Replace(sql.ToString(), "", 1);
+            res = regex.Replace(res.ToString(), "", 1);
+
             return res;
         }
         /// <summary>

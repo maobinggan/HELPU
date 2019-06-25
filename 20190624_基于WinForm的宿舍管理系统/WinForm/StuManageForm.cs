@@ -12,9 +12,16 @@ using System.Windows.Forms;
 
 namespace _20190624_基于WinForm的宿舍管理系统.WinForm
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class StuManageForm : Form
     {
 
+
+        /// <summary>
+        /// 
+        /// </summary>
         void ShowAccommodation()
         {
             //清除数据源，防止乱序
@@ -48,12 +55,21 @@ namespace _20190624_基于WinForm的宿舍管理系统.WinForm
             dataGridView1.Columns.Add(col_Btn_drop); //在dataGridView末尾追加一列
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public StuManageForm()
         {
             InitializeComponent();
 
             ShowAccommodation();
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void DataGridViewCellContent_Click(object sender, DataGridViewCellEventArgs e)
         {
@@ -68,7 +84,7 @@ namespace _20190624_基于WinForm的宿舍管理系统.WinForm
 
                 Accommodation model = new Accommodation(id, sCode, name, gender, dormNo, roomNo);
                 AccommodationDAL dal = new AccommodationDAL();
-                if (dal.AlterById(model)) {
+                if (dal.AlterByPK(model,"id")) {
                     ShowAccommodation();
                     MessageBox.Show("修改成功");
                 }
@@ -86,6 +102,13 @@ namespace _20190624_基于WinForm的宿舍管理系统.WinForm
                 }
             }
         }
+
+
+        /// <summary>
+        /// /
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void Button1_Click(object sender, EventArgs e)
         {

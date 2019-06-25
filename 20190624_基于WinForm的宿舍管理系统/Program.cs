@@ -13,6 +13,8 @@ namespace _20190624_基于WinForm的宿舍管理系统
         /// 应用程序的主入口点。
         /// </summary>
         [STAThread]
+        
+        ///
         static void Main()
         {
             Application.EnableVisualStyles();

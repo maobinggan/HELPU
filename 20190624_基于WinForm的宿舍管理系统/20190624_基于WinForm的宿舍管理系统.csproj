@@ -54,6 +54,12 @@
     <Compile Include="DAL\VisitorDAL.cs" />
     <Compile Include="Model\Accommodation.cs" />
     <Compile Include="Model\Visitor.cs" />
+    <Compile Include="WinForm\AlterInforForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\AlterInforForm.Designer.cs">
+      <DependentUpon>AlterInforForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="WinForm\HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     <Compile Include="WinForm\VisitorCheckInForm.Designer.cs">
       <DependentUpon>VisitorCheckInForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="WinForm\AlterInforForm.resx">
+      <DependentUpon>AlterInforForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WinForm\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>

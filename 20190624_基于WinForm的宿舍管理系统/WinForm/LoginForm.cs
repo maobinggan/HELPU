@@ -13,35 +13,40 @@ using System.Windows.Forms;
 
 namespace _20190624_基于WinForm的宿舍管理系统.WinForm
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class LoginForm : Form
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public LoginForm()
         {
+            ///
             InitializeComponent();
 
             //UserDAL userDal = new UserDAL();
 
 
-            //增
-            //userDal.Add(new User(0, "林嘻嘻", "123456"));
-
-            //删
-            //userDal.Drop(new User(0, "林嘻嘻", "123456"),new List<string> { "password"});
-
-            //改
-            //userDal.AlterById(new User(7, "林妈妈", "123"));
-
-            //查
-            //User user = userDal.FindModel(new User(0, "林嘻嘻", null), new List<string> { "userName" });
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button1_Click(object sender, EventArgs e)
         {
+
+
             if (textBox1.Text == "" && textBox2.Text == "") {
                 MessageBox.Show("用户名或密码不可为空!");
                 return;
             }
+
+
             User inputUser = new User(textBox1.Text, textBox2.Text);
             UserDAL userDAL = new UserDAL();
 
@@ -50,6 +55,7 @@ namespace _20190624_基于WinForm的宿舍管理系统.WinForm
                 MessageBox.Show("用户名或密码错误");
                 return;
             }
+
 
             new HomeForm(this, user).Show();
 

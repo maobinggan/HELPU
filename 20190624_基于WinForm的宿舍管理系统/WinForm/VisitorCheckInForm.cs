@@ -12,9 +12,22 @@ using System.Windows.Forms;
 
 namespace _20190624_基于WinForm的宿舍管理系统.WinForm
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class VisitorCheckInForm : Form
     {
+
+        /// <summary>
+        /// /
+        /// </summary>
         VisitorDAL dal = null;
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
         public VisitorCheckInForm()
         {
             InitializeComponent();
@@ -22,6 +35,9 @@ namespace _20190624_基于WinForm的宿舍管理系统.WinForm
             ShowAccommodation();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         void ShowAccommodation()
         {
             //清除数据源，防止乱序
@@ -41,7 +57,11 @@ namespace _20190624_基于WinForm的宿舍管理系统.WinForm
         }
 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button1_Click(object sender, EventArgs e)
         {
             string name = textBox1.Text;
@@ -55,6 +75,17 @@ namespace _20190624_基于WinForm的宿舍管理系统.WinForm
 
             Visitor visitor = new Visitor(name, dormNo, reason, date);
             if (dal.Add(visitor)) { ShowAccommodation(); MessageBox.Show("登记成功"); }
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
