@@ -91,6 +91,11 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.BackgroundImage = global::_20190627_基于WinForm的考勤管理系统.Properties.Resources.splitContainer1_Panel2_BackgroundImage;
+            this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.splitContainer1.Size = new System.Drawing.Size(833, 494);
             this.splitContainer1.SplitterDistance = 110;
             this.splitContainer1.TabIndex = 2;
