@@ -35,9 +35,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20190626_基于WinForm的�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20190626_基于链表的日程管理系统", "20190626_基于链表的日程管理系统\20190626_基于链表的日程管理系统.vcxproj", "{05795B67-1CCD-468B-A6CD-C68AAD846087}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20190627_基于WinForm的考勤管理系统[布局精致]", "20190627_基于WinForm的考勤管理系统\20190627_基于WinForm的考勤管理系统[布局精致].csproj", "{7CDAF830-7F6B-4621-BFCA-7D3F6088A1D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20190627_基于WinForm的考勤管理系统[布局精美]", "20190627_基于WinForm的考勤管理系统\20190627_基于WinForm的考勤管理系统[布局精美].csproj", "{7CDAF830-7F6B-4621-BFCA-7D3F6088A1D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20190626_基于WinForm的成绩管理系统[简单高效]", "20190626_基于WinForm的成绩管理系统\20190626_基于WinForm的成绩管理系统[简单高效].csproj", "{184BDFA9-8013-42E7-B87B-C4658E294399}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20190626_基于WinForm的成绩管理系统[布局简单高效]", "20190626_基于WinForm的成绩管理系统\20190626_基于WinForm的成绩管理系统[布局简单高效].csproj", "{184BDFA9-8013-42E7-B87B-C4658E294399}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20190628_基于WinForm的影院票务系统[布局简单高效]", "20190628_基于WinForm的影院票务系统\20190628_基于WinForm的影院票务系统[布局简单高效].csproj", "{92EE160D-9CDE-4D5C-871B-AD8FB1F5D13F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -243,6 +245,18 @@ Global
 		{184BDFA9-8013-42E7-B87B-C4658E294399}.Release|x64.Build.0 = Release|Any CPU
 		{184BDFA9-8013-42E7-B87B-C4658E294399}.Release|x86.ActiveCfg = Release|Any CPU
 		{184BDFA9-8013-42E7-B87B-C4658E294399}.Release|x86.Build.0 = Release|Any CPU
+		{92EE160D-9CDE-4D5C-871B-AD8FB1F5D13F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92EE160D-9CDE-4D5C-871B-AD8FB1F5D13F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92EE160D-9CDE-4D5C-871B-AD8FB1F5D13F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{92EE160D-9CDE-4D5C-871B-AD8FB1F5D13F}.Debug|x64.Build.0 = Debug|Any CPU
+		{92EE160D-9CDE-4D5C-871B-AD8FB1F5D13F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{92EE160D-9CDE-4D5C-871B-AD8FB1F5D13F}.Debug|x86.Build.0 = Debug|Any CPU
+		{92EE160D-9CDE-4D5C-871B-AD8FB1F5D13F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92EE160D-9CDE-4D5C-871B-AD8FB1F5D13F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92EE160D-9CDE-4D5C-871B-AD8FB1F5D13F}.Release|x64.ActiveCfg = Release|Any CPU
+		{92EE160D-9CDE-4D5C-871B-AD8FB1F5D13F}.Release|x64.Build.0 = Release|Any CPU
+		{92EE160D-9CDE-4D5C-871B-AD8FB1F5D13F}.Release|x86.ActiveCfg = Release|Any CPU
+		{92EE160D-9CDE-4D5C-871B-AD8FB1F5D13F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
