@@ -46,6 +46,7 @@ namespace _20190628_影院票务系统
             //清理数据源、清理列（防止列按钮不断增加）
             dataGridView1.DataSource = null;
             dataGridView1.Columns.Clear();
+            //like模糊查询
             dataGridView1.DataSource = TicketDAL.FindDataTable(string.Format("SELECT * FROM [ticket] WHERE [movieName] LIKE '%{0}%'", textBox1.Text));
             dataGridView1.Columns["movieName"].HeaderText = "电影名";
             dataGridView1.Columns["date"].HeaderText = "上映日期";
@@ -61,7 +62,7 @@ namespace _20190628_影院票务系统
         {
             Ticket model = new Ticket();
             model.movieName = textBox2.Text;
-            model.date = dateTimePicker1.Value.Date.ToString();
+            model.date = dateTimePicker1.Text; //仅显示日期，XX年XX月XX日
             model.price = textBox4.Text;
             TicketDAL.Add(model);
 
