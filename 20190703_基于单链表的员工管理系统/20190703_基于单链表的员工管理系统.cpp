@@ -424,11 +424,11 @@ int main()
 		system("cls");
 		printf("\t\t************************\n");
 		printf("\t\t**员工管理系统\n");
-		printf("\t\t*1.增加员工信息\n");
-		printf("\t\t*2.删除员工信息\n");
-		printf("\t\t*3.修改员工信息\n");
-		printf("\t\t*4.查询员工信息(按编号)\n");
-		printf("\t\t*5.排序员工信息(按编号升序)\n");
+		printf("\t\t*1.新增\n");
+		printf("\t\t*2.删除\n");
+		printf("\t\t*3.修改\n");
+		printf("\t\t*4.查询(按编号)\n");
+		printf("\t\t*5.排序(按编号升序)\n");
 		printf("\t\t*6.保存至文件\n");
 		printf("\t\t************************\n");
 
